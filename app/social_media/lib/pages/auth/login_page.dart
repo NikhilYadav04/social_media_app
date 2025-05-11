@@ -5,6 +5,7 @@ import 'package:social_media/helper/shared_pref.dart';
 import 'package:social_media/pages/auth/register_page.dart';
 import 'package:social_media/services/authServices.dart';
 import 'package:social_media/styling/colors.dart';
+import 'package:social_media/styling/sizeConfig.dart';
 import 'package:social_media/widgets/logger_glob.dart';
 import 'package:social_media/widgets/textFields.dart';
 
@@ -45,18 +46,18 @@ class _LoginPageState extends State<LoginPage> {
             resizeToAvoidBottomInset: true,
             backgroundColor: ColorsApp.loginBGColor,
             body: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              padding: EdgeInsets.symmetric(horizontal: 2.2321*SizeConfig.widthMultiplier),
               child: Align(
                 alignment: Alignment.center,
                 child: Container(
                   clipBehavior: Clip.none,
-                  padding: EdgeInsets.symmetric(vertical: 35, horizontal: 18),
+                  padding: EdgeInsets.symmetric(vertical: 3.6868*SizeConfig.heightMultiplier, horizontal: 4.01788*SizeConfig.widthMultiplier),
                   width: double.infinity,
-                  margin: EdgeInsets.only(bottom: 50),
-                  height: 640,
+                  margin: EdgeInsets.only(bottom: 5.26685*SizeConfig.heightMultiplier),
+                  height: 67.415754*SizeConfig.heightMultiplier,
                   decoration: BoxDecoration(
                     border: Border.all(width: 2, color: Colors.purple.shade700),
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(1.26404*SizeConfig.heightMultiplier),
                     color: ColorsApp.loginCardColor,
                   ),
                   child: SingleChildScrollView(
@@ -67,10 +68,10 @@ class _LoginPageState extends State<LoginPage> {
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w500,
-                              fontSize: 38),
+                              fontSize: 4.002810*SizeConfig.heightMultiplier),
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 1.0533*SizeConfig.heightMultiplier,
                         ),
                         FittedBox(
                           child: Text(
@@ -78,11 +79,11 @@ class _LoginPageState extends State<LoginPage> {
                             style: TextStyle(
                                 color: Colors.grey.shade400,
                                 fontWeight: FontWeight.w500,
-                                fontSize: 21),
+                                fontSize: 2.212079*SizeConfig.heightMultiplier),
                           ),
                         ),
                         SizedBox(
-                          height: 30,
+                          height: 3.160123*SizeConfig.heightMultiplier,
                         ),
 
                         //* Email
@@ -93,17 +94,17 @@ class _LoginPageState extends State<LoginPage> {
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w500,
-                                fontSize: 26),
+                                fontSize: 2.738765*SizeConfig.heightMultiplier),
                           ),
                         ),
                         SizedBox(
-                          height: 15,
+                          height: 1.580056*SizeConfig.heightMultiplier,
                         ),
                         normalField(
                             _emailController, Icons.email, "Enter your email"),
 
                         SizedBox(
-                          height: 30,
+                          height: 3.160123*SizeConfig.heightMultiplier,
                         ),
 
                         //* password
@@ -114,26 +115,26 @@ class _LoginPageState extends State<LoginPage> {
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w500,
-                                fontSize: 26),
+                                fontSize: 2.73876*SizeConfig.heightMultiplier),
                           ),
                         ),
                         SizedBox(
-                          height: 15,
+                          height: 1.58005*SizeConfig.heightMultiplier,
                         ),
                         Container(
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(1.26404*SizeConfig.heightMultiplier),
                               boxShadow: [
                                 BoxShadow(
                                     blurRadius: 1,
                                     spreadRadius: 1,
                                     color: Colors.grey.shade100)
                               ]),
-                          height: 60,
+                          height: 6.320246*SizeConfig.heightMultiplier,
                           child: TextField(
                             obscureText: !_isVisible,
                             style: TextStyle(
-                                color: Colors.grey.shade200, fontSize: 22),
+                                color: Colors.grey.shade200, fontSize: 2.317416*SizeConfig.heightMultiplier),
                             controller: _passwordController,
                             decoration: InputDecoration(
                               suffixIcon: InkWell(
@@ -146,47 +147,47 @@ class _LoginPageState extends State<LoginPage> {
                                   _isVisible
                                       ? Icons.visibility
                                       : Icons.visibility_off,
-                                  size: 26,
+                                  size: 2.73877*SizeConfig.heightMultiplier,
                                   color: Colors.grey.shade200,
                                 ),
                               ),
                               prefixIcon: Icon(
                                 Icons.password,
-                                size: 26,
+                                size: 2.73877*SizeConfig.heightMultiplier,
                                 color: Colors.grey.shade200,
                               ),
                               label: Text(
                                 "Enter your password",
                                 style: TextStyle(
-                                    color: Colors.grey.shade200, fontSize: 22),
+                                    color: Colors.grey.shade200, fontSize: 2.317416*SizeConfig.heightMultiplier),
                               ),
                               filled: true,
                               fillColor: ColorsApp.backgroundColor,
                               floatingLabelBehavior:
                                   FloatingLabelBehavior.never,
                               border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(1.2640*SizeConfig.heightMultiplier),
                                   borderSide: BorderSide(color: Colors.black)),
                               enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(1.2640*SizeConfig.heightMultiplier),
                                 borderSide: BorderSide(color: Colors.black),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(1.2640*SizeConfig.heightMultiplier),
                                   borderSide: BorderSide(color: Colors.white)),
                             ),
                           ),
                         ),
 
                         SizedBox(
-                          height: 50,
+                          height: 5.2668*SizeConfig.heightMultiplier,
                         ),
 
                         _isLoading
                             ? Center(
                                 child: SpinKitCircle(
                                   color: Colors.purple.shade700,
-                                  size: 30,
+                                  size: 3.160123*SizeConfig.heightMultiplier,
                                 ),
                               )
                             : Center(
@@ -194,7 +195,7 @@ class _LoginPageState extends State<LoginPage> {
                                     icon: Icon(
                                       Icons.login,
                                       color: Colors.white,
-                                      size: 36,
+                                      size: 3.79214*SizeConfig.heightMultiplier,
                                     ),
                                     style: ButtonStyle(
                                         backgroundColor: WidgetStatePropertyAll(
@@ -202,10 +203,10 @@ class _LoginPageState extends State<LoginPage> {
                                         shape: WidgetStatePropertyAll(
                                           RoundedRectangleBorder(
                                               borderRadius:
-                                                  BorderRadius.circular(10)),
+                                                  BorderRadius.circular(1.0533*SizeConfig.heightMultiplier)),
                                         ),
                                         fixedSize: WidgetStatePropertyAll(
-                                            Size(450, 55))),
+                                            Size(100.446*SizeConfig.widthMultiplier,5.793559*SizeConfig.heightMultiplier))),
                                     onPressed: () async {
                                       //* Login API Call
                                       //* Register Function
@@ -227,16 +228,16 @@ class _LoginPageState extends State<LoginPage> {
                                       "Login",
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: 26,
+                                          fontSize: 2.73876*SizeConfig.heightMultiplier,
                                           fontWeight: FontWeight.w600),
                                     )),
                               ),
 
-                        SizedBox(height: 30),
+                        SizedBox(height: 3.16011*SizeConfig.heightMultiplier),
 
                         RichText(
                           text: TextSpan(
-                            style: TextStyle(color: Colors.white, fontSize: 22),
+                            style: TextStyle(color: Colors.white, fontSize: 2.317416*SizeConfig.heightMultiplier),
                             children: [
                               TextSpan(text: "Don't have an account? "),
                               TextSpan(
@@ -251,7 +252,7 @@ class _LoginPageState extends State<LoginPage> {
                                   },
                                 text: 'Register',
                                 style: TextStyle(
-                                  fontSize: 22,
+                                  fontSize: 2.317416*SizeConfig.heightMultiplier,
                                   color: Color.fromARGB(255, 184, 85, 226),
                                   fontWeight: FontWeight.bold,
                                   decoration: TextDecoration.underline,

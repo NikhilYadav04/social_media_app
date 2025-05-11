@@ -16,13 +16,19 @@ const recharge = async (req, res) => {
 
     //* formatted date
     const now = new Date();
+    const istDate = new Date(
+      now.toLocaleString("en-US", { timeZone: "Asia/Kolkata" })
+    );
 
-    const day = String(now.getDate()).padStart(2, "0");
-    const month = now.toLocaleString("en-GB", { month: "short" });
-    const year = now.getFullYear();
+    const day = String(istDate.getDate()).padStart(2, "0");
+    const month = istDate.toLocaleString("en-GB", {
+      month: "short",
+      timeZone: "Asia/Kolkata",
+    });
+    const year = istDate.getFullYear();
 
-    const hours = String(now.getHours()).padStart(2, "0");
-    const minutes = String(now.getMinutes()).padStart(2, "0");
+    const hours = String(istDate.getHours()).padStart(2, "0");
+    const minutes = String(istDate.getMinutes()).padStart(2, "0");
 
     const formatted = `${day} ${month} ${year} : ${hours} : ${minutes}`;
 

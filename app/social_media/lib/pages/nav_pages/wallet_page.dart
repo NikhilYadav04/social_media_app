@@ -4,6 +4,7 @@ import 'package:skeletonizer/skeletonizer.dart';
 import 'package:social_media/pages/nav_pages/wallet_history_page.dart';
 import 'package:social_media/services/walletServices.dart';
 import 'package:social_media/styling/colors.dart';
+import 'package:social_media/styling/sizeConfig.dart';
 
 class WalletPage extends StatefulWidget {
   const WalletPage({super.key});
@@ -54,7 +55,7 @@ class _WalletPageState extends State<WalletPage> {
               SliverAppBar(
                 automaticallyImplyLeading: false,
                 backgroundColor: ColorsApp.backgroundColor,
-                toolbarHeight: 75,
+                toolbarHeight: 7.90028*SizeConfig.heightMultiplier,
                 centerTitle: true,
                 leading: InkWell(
                     onTap: () {
@@ -63,32 +64,32 @@ class _WalletPageState extends State<WalletPage> {
                     child: Icon(
                       Icons.arrow_back,
                       color: Colors.white,
-                      size: 38,
+                      size: 4.00282*SizeConfig.heightMultiplier,
                     )),
                 title: Text(
                   'Wallet',
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
-                      fontSize: 34),
+                      fontSize: 3.58147*SizeConfig.heightMultiplier),
                 ),
               ),
             ];
           },
           body: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 12),
+            padding: EdgeInsets.symmetric(horizontal: 2.6785*SizeConfig.widthMultiplier),
             child: Column(
               children: [
                 SizedBox(
-                  height: 12,
+                  height: 1.26404*SizeConfig.heightMultiplier,
                 ),
                 Skeletonizer(
                   enabled: _isFetching,
                   child: Container(
-                    height: 220,
+                    height: 23.17423*SizeConfig.heightMultiplier,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(1.26404*SizeConfig.heightMultiplier),
                         gradient: LinearGradient(
                           colors: [
                             Color(0xFFB36A5E), // soft warm brown
@@ -109,7 +110,7 @@ class _WalletPageState extends State<WalletPage> {
                         ]),
                     child: Padding(
                       padding:
-                          EdgeInsets.symmetric(vertical: 20, horizontal: 15),
+                          EdgeInsets.symmetric(vertical: 2.1067*SizeConfig.heightMultiplier, horizontal: 3.34821*SizeConfig.widthMultiplier),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -120,35 +121,35 @@ class _WalletPageState extends State<WalletPage> {
                                 "Your Balance",
                                 style: TextStyle(
                                     color: Colors.grey.shade500,
-                                    fontSize: 24,
+                                    fontSize: 2.52809*SizeConfig.heightMultiplier,
                                     fontWeight: FontWeight.w500),
                               ),
                               Icon(
                                 Icons.account_balance_wallet_outlined,
                                 color: Colors.white,
-                                size: 28,
+                                size: 2.94948*SizeConfig.heightMultiplier,
                               )
                             ],
                           ),
                           SizedBox(
-                            height: 5,
+                            height: 0.52668*SizeConfig.heightMultiplier,
                           ),
                           Text(
                             "₹$balance",
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 52,
+                                fontSize: 5.477547*SizeConfig.heightMultiplier,
                                 fontWeight: FontWeight.w700),
                           ),
                           SizedBox(
-                            height: 10,
+                            height: 1.053*SizeConfig.heightMultiplier,
                           ),
                           ElevatedButton.icon(
                               label: FittedBox(
                                 child: Text(
                                   "Last updated : $updatedAt",
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 20),
+                                      color: Colors.white, fontSize: 2.1067*SizeConfig.heightMultiplier),
                                 ),
                               ),
                               style: ButtonStyle(
@@ -157,9 +158,9 @@ class _WalletPageState extends State<WalletPage> {
                                   shape: WidgetStatePropertyAll(
                                       RoundedRectangleBorder(
                                           borderRadius:
-                                              BorderRadius.circular(5))),
+                                              BorderRadius.circular(0.52668*SizeConfig.heightMultiplier))),
                                   fixedSize:
-                                      WidgetStatePropertyAll(Size(285, 50))),
+                                      WidgetStatePropertyAll(Size(63.6160*SizeConfig.widthMultiplier, 5.26687*SizeConfig.heightMultiplier))),
                               onPressed: () {
                                 Navigator.push(
                                   context,
@@ -173,7 +174,7 @@ class _WalletPageState extends State<WalletPage> {
                               icon: Icon(
                                 Icons.history,
                                 color: Colors.white,
-                                size: 23,
+                                size: 2.42276*SizeConfig.heightMultiplier,
                               ))
                         ],
                       ),
@@ -181,18 +182,18 @@ class _WalletPageState extends State<WalletPage> {
                   ),
                 ),
                 SizedBox(
-                  height: 35,
+                  height:3.68681*SizeConfig.heightMultiplier,
                 ),
                 Expanded(
                     child: SingleChildScrollView(
                   child: Container(
-                    padding: EdgeInsets.symmetric(vertical: 15, horizontal: 14),
+                    padding: EdgeInsets.symmetric(vertical: 1.5800*SizeConfig.heightMultiplier, horizontal: 3.125*SizeConfig.widthMultiplier),
                     width: double.infinity,
                     decoration: BoxDecoration(
                         color: Color.fromARGB(255, 53, 51, 51),
                         borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(12),
-                            topRight: Radius.circular(12))),
+                            topLeft: Radius.circular(1.264*SizeConfig.heightMultiplier),
+                            topRight: Radius.circular(1.264*SizeConfig.heightMultiplier))),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -200,81 +201,81 @@ class _WalletPageState extends State<WalletPage> {
                           "Recharge Wallet",
                           style: TextStyle(
                               color: Colors.white,
-                              fontSize: 33,
+                              fontSize: 3.47613*SizeConfig.heightMultiplier,
                               fontWeight: FontWeight.w600),
                         ),
                         SizedBox(
-                          height: 8,
+                          height: 0.84269*SizeConfig.heightMultiplier,
                         ),
                         Text(
                           "Enter amount to add to your wallet",
                           style: TextStyle(
                               color: Colors.grey,
-                              fontSize: 22,
+                              fontSize: 2.31742*SizeConfig.heightMultiplier,
                               fontWeight: FontWeight.w400),
                         ),
                         SizedBox(
-                          height: 28,
+                          height: 2.94944*SizeConfig.heightMultiplier,
                         ),
 
                         //* Search Field
                         Container(
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(1.264*SizeConfig.heightMultiplier),
                               boxShadow: [
                                 BoxShadow(
                                     blurRadius: 5,
                                     spreadRadius: 2,
                                     color: Colors.grey.shade100)
                               ]),
-                          height: 60,
+                          height:6.3202*SizeConfig.heightMultiplier,
                           child: TextField(
                             keyboardType: TextInputType.phone,
                             style: TextStyle(
-                                color: Colors.grey.shade200, fontSize: 22),
+                                color: Colors.grey.shade200, fontSize:2.3174*SizeConfig.heightMultiplier),
                             controller: _amountController,
                             decoration: InputDecoration(
                               prefixIcon: Icon(
                                 Icons.currency_rupee,
-                                size: 30,
+                                size: 3.16012*SizeConfig.heightMultiplier,
                                 color: Colors.grey.shade200,
                               ),
                               label: Text(
                                 "Enter Amount To Recharge",
                                 style: TextStyle(
-                                    color: Colors.grey.shade200, fontSize: 22),
+                                    color: Colors.grey.shade200, fontSize: 2.3174*SizeConfig.heightMultiplier),
                               ),
                               filled: true,
                               fillColor: ColorsApp.backgroundColor,
                               floatingLabelBehavior:
                                   FloatingLabelBehavior.never,
                               border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(1.264*SizeConfig.heightMultiplier),
                                   borderSide: BorderSide(color: Colors.black)),
                               enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(1.264*SizeConfig.heightMultiplier),
                                 borderSide: BorderSide(color: Colors.black),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(1.264*SizeConfig.heightMultiplier),
                                   borderSide: BorderSide(color: Colors.white)),
                             ),
                           ),
                         ),
 
                         SizedBox(
-                          height: 28,
+                          height: 2.94944*SizeConfig.heightMultiplier,
                         ),
                         Text(
                           "Quick Select : ",
                           style: TextStyle(
                               color: Colors.grey,
-                              fontSize: 22,
+                              fontSize: 2.317*SizeConfig.heightMultiplier,
                               fontWeight: FontWeight.w600),
                         ),
 
                         SizedBox(
-                          height: 17,
+                          height: 1.7907*SizeConfig.heightMultiplier,
                         ),
 
                         Row(
@@ -288,7 +289,7 @@ class _WalletPageState extends State<WalletPage> {
                         ),
 
                         SizedBox(
-                          height: 160,
+                          height: 16.8539*SizeConfig.heightMultiplier,
                         ),
 
                         _isRecharge
@@ -300,11 +301,11 @@ class _WalletPageState extends State<WalletPage> {
                                     backgroundColor: WidgetStatePropertyAll(
                                         Colors.purple.shade700),
                                     fixedSize:
-                                        WidgetStatePropertyAll(Size(400, 60)),
+                                        WidgetStatePropertyAll(Size(89.285*SizeConfig.widthMultiplier, 6.3202*SizeConfig.heightMultiplier)),
                                     shape: WidgetStatePropertyAll(
                                         RoundedRectangleBorder(
                                             borderRadius:
-                                                BorderRadius.circular(10)))),
+                                                BorderRadius.circular(1.053*SizeConfig.heightMultiplier)))),
                                 onPressed: () async {
                                   //* Recharge Wallet
                                   setState(() {
@@ -326,7 +327,7 @@ class _WalletPageState extends State<WalletPage> {
                                     "Recharge Now",
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontSize: 26,
+                                        fontSize: 2.73877*SizeConfig.heightMultiplier,
                                         fontWeight: FontWeight.w600),
                                   ),
                                 ))
@@ -345,9 +346,9 @@ Widget amountButton(num value, TextEditingController _amountController) {
   return ElevatedButton(
       style: ButtonStyle(
           backgroundColor: WidgetStatePropertyAll(Colors.purple.shade700),
-          fixedSize: WidgetStatePropertyAll(Size(90, 50)),
+          fixedSize: WidgetStatePropertyAll(Size(20.0892*SizeConfig.widthMultiplier, 5.2670*SizeConfig.heightMultiplier)),
           shape: WidgetStatePropertyAll(
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)))),
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(0.526*SizeConfig.heightMultiplier)))),
       onPressed: () {
         _amountController.text = value.toString();
       },
@@ -356,7 +357,7 @@ Widget amountButton(num value, TextEditingController _amountController) {
           child: Text(
             "₹$value",
             style: TextStyle(
-                color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700),
+                color: Colors.white, fontSize: 1.89607*SizeConfig.heightMultiplier, fontWeight: FontWeight.w700),
           ),
         ),
       ));

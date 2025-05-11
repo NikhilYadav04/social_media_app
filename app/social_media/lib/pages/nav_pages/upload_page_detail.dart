@@ -5,6 +5,7 @@ import 'package:flick_video_player/flick_video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:social_media/services/videoServices.dart';
+import 'package:social_media/styling/sizeConfig.dart';
 import 'package:video_player/video_player.dart';
 import 'package:social_media/styling/colors.dart';
 
@@ -62,7 +63,7 @@ class _UploadPageDetailState extends State<UploadPageDetail> {
                         )),
                     automaticallyImplyLeading: false,
                     backgroundColor: ColorsApp.backgroundColor,
-                    toolbarHeight: 85,
+                    toolbarHeight: 8.95368*SizeConfig.heightMultiplier,
                     actions: [
                       IconButton(
                           onPressed: () {
@@ -71,7 +72,7 @@ class _UploadPageDetailState extends State<UploadPageDetail> {
                           icon: Icon(
                             Icons.upload,
                             color: Colors.white,
-                            size: 38,
+                            size: 4.002810*SizeConfig.heightMultiplier,
                           )),
                     ],
                     title: Text(
@@ -79,7 +80,7 @@ class _UploadPageDetailState extends State<UploadPageDetail> {
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w600,
-                          fontSize: 34),
+                          fontSize: 3.5814619*SizeConfig.heightMultiplier),
                     ),
                   ),
                 ];
@@ -89,7 +90,7 @@ class _UploadPageDetailState extends State<UploadPageDetail> {
                 children: [
                   Container(
                       padding:
-                          EdgeInsets.symmetric(vertical: 10, horizontal: 12),
+                          EdgeInsets.symmetric(vertical: 1.053*SizeConfig.heightMultiplier, horizontal: 2.67857*SizeConfig.widthMultiplier),
                       width: double.infinity,
                       decoration: BoxDecoration(
                         color: ColorsApp.backgroundColor,
@@ -102,16 +103,16 @@ class _UploadPageDetailState extends State<UploadPageDetail> {
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w600,
-                                fontSize: 32),
+                                fontSize: 3.370798*SizeConfig.heightMultiplier),
                           ),
                           SizedBox(
-                            height: 20,
+                            height: 2.10681*SizeConfig.heightMultiplier,
                           ),
 
                           //* DIsplay Video
                           Container(
                             padding: EdgeInsets.symmetric(
-                                vertical: 10, horizontal: 8),
+                                vertical: 1.053*SizeConfig.heightMultiplier, horizontal: 1.7857*SizeConfig.widthMultiplier),
                             width: double.infinity,
                             decoration: BoxDecoration(
                               color: ColorsApp.backgroundColor,
@@ -121,10 +122,10 @@ class _UploadPageDetailState extends State<UploadPageDetail> {
                               children: [
                                 //* Display Video
                                 SizedBox(
-                                  height: 340,
+                                  height: 35.8147*SizeConfig.heightMultiplier,
                                   child: ClipRRect(
                                     borderRadius:
-                                        BorderRadius.circular(8), // Optional
+                                        BorderRadius.circular(0.8426*SizeConfig.heightMultiplier), // Optional
                                     child: FutureBuilder(
                                       future: _initializeVideoPlayerFuture,
                                       builder: (context, snapshot) {
@@ -134,10 +135,10 @@ class _UploadPageDetailState extends State<UploadPageDetail> {
                                             flickManager: _flickManager,
                                           );
                                         } else {
-                                          return const Center(
+                                          return  Center(
                                             child: SpinKitFadingCube(
                                               color: ColorsApp.backgroundColor,
-                                              size: 36,
+                                              size: 3.7921*SizeConfig.heightMultiplier,
                                             ),
                                           );
                                         }
@@ -149,59 +150,59 @@ class _UploadPageDetailState extends State<UploadPageDetail> {
                             ),
                           ),
                           SizedBox(
-                            height: 15,
+                            height: 1.58006*SizeConfig.heightMultiplier,
                           ),
                           Text(
                             "Video Title : ",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w600,
-                                fontSize: 32),
+                                fontSize: 3.370787*SizeConfig.heightMultiplier),
                           ),
                           SizedBox(
-                            height: 20,
+                            height: 2.1067*SizeConfig.heightMultiplier,
                           ),
                           //* Search Field
                           Container(
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(1.2640*SizeConfig.heightMultiplier),
                                 boxShadow: [
                                   BoxShadow(
                                       blurRadius: 5,
                                       spreadRadius: 2,
                                       color: Colors.grey.shade100)
                                 ]),
-                            height: 60,
+                            height: 6.32022*SizeConfig.heightMultiplier,
                             child: TextField(
                               style: TextStyle(
-                                  color: Colors.grey.shade200, fontSize: 22),
+                                  color: Colors.grey.shade200, fontSize: 2.3174*SizeConfig.heightMultiplier),
                               controller: _titleController,
                               decoration: InputDecoration(
                                 prefixIcon: Icon(
                                   Icons.search,
-                                  size: 30,
+                                  size: 3.16012*SizeConfig.heightMultiplier,
                                   color: Colors.grey.shade200,
                                 ),
                                 label: Text(
                                   "Enter Your Video Title",
                                   style: TextStyle(
                                       color: Colors.grey.shade200,
-                                      fontSize: 22),
+                                      fontSize: 2.3174*SizeConfig.heightMultiplier),
                                 ),
                                 filled: true,
                                 fillColor: ColorsApp.backgroundColor,
                                 floatingLabelBehavior:
                                     FloatingLabelBehavior.never,
                                 border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(12),
+                                    borderRadius: BorderRadius.circular(1.2640*SizeConfig.heightMultiplier),
                                     borderSide:
                                         BorderSide(color: Colors.black)),
                                 enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(1.2640*SizeConfig.heightMultiplier),
                                   borderSide: BorderSide(color: Colors.black),
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(12),
+                                    borderRadius: BorderRadius.circular(1.2640*SizeConfig.heightMultiplier),
                                     borderSide:
                                         BorderSide(color: Colors.white)),
                               ),
@@ -209,20 +210,20 @@ class _UploadPageDetailState extends State<UploadPageDetail> {
                           ),
 
                           SizedBox(
-                            height: 150,
+                            height: 15.8006*SizeConfig.heightMultiplier,
                           ),
 
                           _isLoading
                               ? SpinKitCircle(
                                   color: Colors.purple.shade800,
-                                  size: 36,
+                                  size:3.792*SizeConfig.heightMultiplier,
                                 )
                               : Center(
                                   child: ElevatedButton.icon(
                                       icon: Icon(
                                         Icons.upload,
                                         color: Colors.white,
-                                        size: 38,
+                                        size: 4.00282*SizeConfig.heightMultiplier,
                                       ),
                                       style: ButtonStyle(
                                           backgroundColor:
@@ -231,10 +232,10 @@ class _UploadPageDetailState extends State<UploadPageDetail> {
                                           shape: WidgetStatePropertyAll(
                                             RoundedRectangleBorder(
                                                 borderRadius:
-                                                    BorderRadius.circular(15)),
+                                                    BorderRadius.circular(1.5800*SizeConfig.heightMultiplier)),
                                           ),
                                           fixedSize: WidgetStatePropertyAll(
-                                              Size(450, 65))),
+                                              Size(100.446*SizeConfig.widthMultiplier, 6.8469*SizeConfig.heightMultiplier))),
                                       onPressed: () async {
                                         //* Upload
                                         setState(() {
@@ -256,7 +257,7 @@ class _UploadPageDetailState extends State<UploadPageDetail> {
                                         "Upload",
                                         style: TextStyle(
                                             color: Colors.white,
-                                            fontSize: 28,
+                                            fontSize: 2.94944*SizeConfig.heightMultiplier,
                                             fontWeight: FontWeight.w600),
                                       )),
                                 )

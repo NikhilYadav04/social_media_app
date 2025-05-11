@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:social_media/styling/sizeConfig.dart';
 import 'package:social_media/widgets/logger_glob.dart';
 import 'package:social_media/widgets/purchaseCard.dart';
 
@@ -14,7 +15,7 @@ Widget videoCard(
 ) {
   printLog(videoURl);
   return SizedBox(
-    height: 330,
+    height: 34.7613*SizeConfig.heightMultiplier,
     child: Stack(
       fit: StackFit.expand,
       children: [
@@ -26,7 +27,7 @@ Widget videoCard(
                   spreadRadius: 2,
                   blurRadius: 2)
             ],
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(1.053*SizeConfig.heightMultiplier),
           ),
           child: CachedNetworkImage(
             imageUrl: videoURl,
@@ -41,12 +42,12 @@ Widget videoCard(
             width: double.infinity,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(12),
-                  bottomRight: Radius.circular(12),
+                  bottomLeft: Radius.circular(1.2640*SizeConfig.heightMultiplier),
+                  bottomRight: Radius.circular(1.2640*SizeConfig.heightMultiplier),
                 ),
                 color: Colors.grey.shade900),
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 7.5, vertical: 8),
+              padding: EdgeInsets.symmetric(horizontal: 1.6741*SizeConfig.widthMultiplier, vertical: 0.84269*SizeConfig.heightMultiplier),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -57,20 +58,20 @@ Widget videoCard(
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w500,
-                        fontSize: 18),
+                        fontSize: 1.8960*SizeConfig.heightMultiplier),
                   ),
                   SizedBox(
-                    height: 12,
+                    height: 1.264*SizeConfig.heightMultiplier,
                   ),
                   Row(
                     children: [
                       Icon(
                         Icons.calendar_today_rounded,
                         color: Colors.purple.shade100,
-                        size: 20,
+                        size: 2.1067*SizeConfig.heightMultiplier,
                       ),
                       SizedBox(
-                        width: 12,
+                        width:2.678*SizeConfig.widthMultiplier,
                       ),
                       Text(
                         date,
@@ -79,7 +80,7 @@ Widget videoCard(
                         style: TextStyle(
                             color: Colors.purple.shade100,
                             fontWeight: FontWeight.w500,
-                            fontSize: 17),
+                            fontSize: 1.7907*SizeConfig.heightMultiplier),
                       ),
                     ],
                   )
@@ -101,22 +102,22 @@ Widget videoCard(
                 Icon(
                   Icons.person,
                   color: Colors.white,
-                  size: 20,
+                  size: 2.1067*SizeConfig.heightMultiplier,
                 ),
                 SizedBox(
-                  width: 5,
+                  width: 1.11607*SizeConfig.widthMultiplier,
                 ),
                 Text(
                   videoCreator,
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 16,
+                      fontSize: 1.685399*SizeConfig.heightMultiplier,
                       fontWeight: FontWeight.w600),
                 ),
               ],
             ),
-            height: 30,
-            width: 80,
+            height: 3.1601 * SizeConfig.heightMultiplier,
+            width: 17.857 * SizeConfig.widthMultiplier,
           ),
         ),
         FractionallySizedBox(
@@ -127,19 +128,19 @@ Widget videoCard(
                 Icon(
                   Icons.lock,
                   color: Colors.white,
-                  size: 36,
+                  size: 3.7921481*SizeConfig.heightMultiplier,
                 ),
                 SizedBox(
-                  height: 5,
+                  height: 0.52668,
                 ),
                 TextButton(
                     style: ButtonStyle(
-                        fixedSize: WidgetStatePropertyAll(Size(100, 45)),
+                        fixedSize: WidgetStatePropertyAll(Size(22.3214*SizeConfig.widthMultiplier, 4.74018*SizeConfig.heightMultiplier)),
                         backgroundColor: WidgetStatePropertyAll(
-                            Colors.purple.shade800.withOpacity(0.8)),
+                            Colors.purple.shade800),
                         shape: WidgetStatePropertyAll(
                           RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15),
+                            borderRadius: BorderRadius.circular(1.5800*SizeConfig.heightMultiplier),
                           ),
                         )),
                     onPressed: () {
@@ -148,8 +149,8 @@ Widget videoCard(
                           builder: (context) {
                             return ClipRRect(
                               borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(10),
-                                topRight: Radius.circular(10),
+                                topLeft: Radius.circular(1.053*SizeConfig.heightMultiplier),
+                                topRight: Radius.circular(1.053*SizeConfig.heightMultiplier),
                               ),
                               child: FractionallySizedBox(
                                 heightFactor: 1,
@@ -167,7 +168,7 @@ Widget videoCard(
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w600,
-                            fontSize: 20),
+                            fontSize: 2.1067*SizeConfig.heightMultiplier),
                       ),
                     )),
               ],

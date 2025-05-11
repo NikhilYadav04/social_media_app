@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:social_media/services/accountService.dart';
 import 'package:social_media/styling/colors.dart';
+import 'package:social_media/styling/sizeConfig.dart';
 
 List<String> quality = ["240p", "360p", "720p", "1080p"];
 
@@ -21,49 +22,49 @@ Widget purchaseCard(num balance, String title, String uploadedAt,
     child: Column(
       children: [
         SizedBox(
-          height: 12,
+          height: 1.264*SizeConfig.heightMultiplier,
         ),
         Center(
           child: Text(
             "Purchase Video Quality",
             style: TextStyle(
-                color: Colors.white, fontWeight: FontWeight.w700, fontSize: 30),
+                color: Colors.white, fontWeight: FontWeight.w700, fontSize: 3.16012*SizeConfig.heightMultiplier),
           ),
         ),
         SizedBox(
-          height: 15,
+          height: 1.5800*SizeConfig.heightMultiplier,
         ),
         ElevatedButton.icon(
           style: ButtonStyle(
-              fixedSize: WidgetStatePropertyAll(Size(230, 55)),
+              fixedSize: WidgetStatePropertyAll(Size(51.339*SizeConfig.widthMultiplier, 5.793*SizeConfig.heightMultiplier)),
               shape: WidgetStatePropertyAll(RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10))),
+                  borderRadius: BorderRadius.circular(1.053*SizeConfig.heightMultiplier))),
               backgroundColor: WidgetStatePropertyAll(Colors.purple.shade800)),
           onPressed: () {},
           label: Text(
             "Balance : ₹${balance}",
-            style: TextStyle(color: Colors.white, fontSize: 20),
+            style: TextStyle(color: Colors.white, fontSize: 2.1067*SizeConfig.heightMultiplier),
           ),
           icon: Icon(
             Icons.account_balance_wallet,
             color: Colors.white,
-            size: 30,
+            size:3.160*SizeConfig.heightMultiplier,
           ),
         ),
         SizedBox(
-          height: 20,
+          height: 2.1067*SizeConfig.heightMultiplier,
         ),
         SizedBox(
-          height: 350,
+          height: 36.8681*SizeConfig.heightMultiplier,
           child: ListView.builder(
               itemCount: 4,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                  padding: EdgeInsets.symmetric(horizontal: 1.11607*SizeConfig.widthMultiplier, vertical: 0.526687*SizeConfig.heightMultiplier),
                   child: ListTile(
-                    minTileHeight: 75,
+                    minTileHeight: 7.9002*SizeConfig.heightMultiplier,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(1.053*SizeConfig.heightMultiplier),
                         side: BorderSide(
                             color: Colors.purple.shade800, width: 2)),
                     tileColor: Color.fromARGB(255, 32, 32, 32),
@@ -72,14 +73,14 @@ Widget purchaseCard(num balance, String title, String uploadedAt,
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 24),
+                          fontSize: 2.52809*SizeConfig.heightMultiplier),
                     ),
                     subtitle: Text(
                       "Unlock This Quality",
                       style: TextStyle(
                           color: Colors.grey,
                           fontWeight: FontWeight.bold,
-                          fontSize: 18),
+                          fontSize: 1.89607*SizeConfig.heightMultiplier),
                     ),
                     trailing: TextButton(
                         style: ButtonStyle(
@@ -87,7 +88,7 @@ Widget purchaseCard(num balance, String title, String uploadedAt,
                                 WidgetStatePropertyAll(Colors.purple.shade800),
                             shape: WidgetStatePropertyAll(
                               RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15),
+                                borderRadius: BorderRadius.circular(1.58006*SizeConfig.heightMultiplier),
                               ),
                             )),
                         onPressed: () async {
@@ -102,13 +103,13 @@ Widget purchaseCard(num balance, String title, String uploadedAt,
                                           //* Check if user has bought this quality
                                           color: Colors.purple.shade800,
                                           width: 3),
-                                      borderRadius: BorderRadius.circular(10)),
+                                      borderRadius: BorderRadius.circular(1.053*SizeConfig.heightMultiplier)),
                                   backgroundColor: ColorsApp.backgroundColor,
                                   content: Container(
                                     padding: EdgeInsets.symmetric(
-                                        vertical: 10, horizontal: 15),
-                                    height: 120,
-                                    width: 180,
+                                        vertical: 1.053*SizeConfig.heightMultiplier, horizontal: 3.34821*SizeConfig.widthMultiplier),
+                                    height: 12.64049*SizeConfig.heightMultiplier,
+                                    width: 40.1785*SizeConfig.widthMultiplier,
                                     decoration: BoxDecoration(
                                         color: ColorsApp.backgroundColor,
                                         borderRadius: BorderRadius.circular(5)),
@@ -116,9 +117,9 @@ Widget purchaseCard(num balance, String title, String uploadedAt,
                                       children: [
                                         SpinKitCircle(
                                           color: Colors.purple.shade800,
-                                          size: 42,
+                                          size: 4.424*SizeConfig.heightMultiplier,
                                         ),
-                                        SizedBox(height: 20),
+                                        SizedBox(height: 2.106*SizeConfig.heightMultiplier),
                                         Center(
                                           child: FittedBox(
                                             child: Text(
@@ -126,7 +127,7 @@ Widget purchaseCard(num balance, String title, String uploadedAt,
                                               style: TextStyle(
                                                   color: Colors.white,
                                                   fontWeight: FontWeight.bold,
-                                                  fontSize: 32),
+                                                  fontSize: 3.3707*SizeConfig.heightMultiplier),
                                             ),
                                           ),
                                         )
@@ -154,7 +155,7 @@ Widget purchaseCard(num balance, String title, String uploadedAt,
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w600,
-                              fontSize: 20),
+                              fontSize:2.1067*SizeConfig.heightMultiplier),
                         )),
                   ),
                 );

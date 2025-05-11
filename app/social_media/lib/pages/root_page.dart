@@ -3,6 +3,7 @@ import 'package:social_media/pages/home_page.dart';
 import 'package:social_media/pages/profile_page.dart';
 import 'package:social_media/pages/upload_page.dart';
 import 'package:social_media/styling/colors.dart';
+import 'package:social_media/styling/sizeConfig.dart';
 
 class RootPage extends StatefulWidget {
   const RootPage({super.key});
@@ -35,9 +36,9 @@ class _RootPageState extends State<RootPage> {
           backgroundColor: ColorsApp.barColor,
           unselectedItemColor: Colors.grey.shade200,
           selectedItemColor: Colors.white,
-          iconSize: 26,
-          selectedFontSize: 20,
-          unselectedFontSize: 20,
+          iconSize: 2.7387650*SizeConfig.heightMultiplier,
+          selectedFontSize: 2.10674*SizeConfig.heightMultiplier,
+          unselectedFontSize: 2.10674*SizeConfig.heightMultiplier,
           items: [
             BottomNavigationBarItem(
                 icon: Icon(

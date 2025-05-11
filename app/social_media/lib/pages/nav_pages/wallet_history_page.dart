@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:social_media/helper/shared_pref.dart';
 
 import 'package:social_media/styling/colors.dart';
+import 'package:social_media/styling/sizeConfig.dart';
 
 class WalletHistoryPage extends StatefulWidget {
   final List<dynamic> balance_history;
@@ -41,7 +42,7 @@ class _WalletHistoryPageState extends State<WalletHistoryPage> {
             return [
               SliverAppBar(
                 backgroundColor: ColorsApp.backgroundColor,
-                toolbarHeight: 75,
+                toolbarHeight: 7.90028*SizeConfig.heightMultiplier,
                 centerTitle: true,
                 leading: InkWell(
                     onTap: () {
@@ -50,14 +51,14 @@ class _WalletHistoryPageState extends State<WalletHistoryPage> {
                     child: Icon(
                       Icons.arrow_back,
                       color: Colors.white,
-                      size: 38,
+                      size: 4.00282*SizeConfig.heightMultiplier,
                     )),
                 title: Text(
                   'Wallet History',
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
-                      fontSize: 34),
+                      fontSize: 3.58146*SizeConfig.heightMultiplier),
                 ),
               ),
             ];
@@ -66,19 +67,19 @@ class _WalletHistoryPageState extends State<WalletHistoryPage> {
               itemCount: widget.balance_history.length,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                  padding: EdgeInsets.symmetric(horizontal: 2.6785*SizeConfig.widthMultiplier, vertical: 0.8426*SizeConfig.heightMultiplier),
                   child: ListTile(
                     contentPadding:
-                        EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-                    minTileHeight: 85,
+                        EdgeInsets.symmetric(horizontal: 3.3482*SizeConfig.widthMultiplier, vertical: 0.526*SizeConfig.heightMultiplier),
+                    minTileHeight: 8.95368*SizeConfig.heightMultiplier,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(1.053*SizeConfig.heightMultiplier),
                         side: BorderSide(
                             color: Color.fromARGB(255, 189, 167, 247),
                             width: 2)),
                     tileColor: Color.fromARGB(255, 32, 32, 32),
                     leading: CircleAvatar(
-                      radius: 28,
+                      radius: 2.949*SizeConfig.heightMultiplier,
                       backgroundColor: Colors.purple.shade600,
                       child: Center(
                         child: FittedBox(
@@ -87,7 +88,7 @@ class _WalletHistoryPageState extends State<WalletHistoryPage> {
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 20),
+                                fontSize: 2.1067*SizeConfig.heightMultiplier),
                           ),
                         ),
                       ),
@@ -97,14 +98,14 @@ class _WalletHistoryPageState extends State<WalletHistoryPage> {
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 23),
+                          fontSize: 2.422*SizeConfig.heightMultiplier),
                     ),
                     subtitle: Text(
                       widget.balance_history[index]["creditedAt"],
                       style: TextStyle(
                           color: Colors.grey,
                           fontWeight: FontWeight.bold,
-                          fontSize: 18),
+                          fontSize: 1.8960*SizeConfig.heightMultiplier),
                     ),
                     trailing: TextButton(
                         style: ButtonStyle(
@@ -112,14 +113,14 @@ class _WalletHistoryPageState extends State<WalletHistoryPage> {
                                 WidgetStatePropertyAll(Colors.purple.shade600),
                             shape: WidgetStatePropertyAll(
                               RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15),
+                                borderRadius: BorderRadius.circular(1.5800*SizeConfig.heightMultiplier),
                               ),
                             )),
                         onPressed: () {},
                         child: Icon(
                           Icons.attach_money,
                           color: Colors.white,
-                          size: 26,
+                          size: 2.73877*SizeConfig.heightMultiplier,
                         )),
                   ),
                 );

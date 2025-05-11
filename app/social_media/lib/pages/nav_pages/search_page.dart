@@ -3,6 +3,7 @@ import 'package:social_media/helper/shared_pref.dart';
 import 'package:social_media/services/accountService.dart';
 import 'package:social_media/services/videoServices.dart';
 import 'package:social_media/styling/colors.dart';
+import 'package:social_media/styling/sizeConfig.dart';
 import 'package:social_media/widgets/toast.dart';
 
 // ignore: must_be_immutable
@@ -29,7 +30,7 @@ class _SearchPageState extends State<SearchPage> {
             return [
               SliverAppBar(
                 backgroundColor: ColorsApp.backgroundColor,
-                toolbarHeight: 75,
+                toolbarHeight: 7.90030*SizeConfig.heightMultiplier,
                 centerTitle: true,
                 leading: InkWell(
                     onTap: () {
@@ -38,22 +39,22 @@ class _SearchPageState extends State<SearchPage> {
                     child: Icon(
                       Icons.arrow_back,
                       color: Colors.white,
-                      size: 38,
+                      size: 4.00282*SizeConfig.heightMultiplier,
                     )),
                 title: Text(
                   'Search Users',
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
-                      fontSize: 34),
+                      fontSize: 3.5814*SizeConfig.heightMultiplier),
                 ),
               ),
-              SliverAppBar(
+              SliverAppBar( 
                 automaticallyImplyLeading: false,
                 floating: true,
                 snap: true,
                 backgroundColor: ColorsApp.backgroundColor,
-                toolbarHeight: 100,
+                toolbarHeight: 10.5337*SizeConfig.heightMultiplier,
                 title: InkWell(
                   onTap: () {
                     // Navigator.push(
@@ -63,14 +64,14 @@ class _SearchPageState extends State<SearchPage> {
                   },
                   child: Container(
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(1.264*SizeConfig.heightMultiplier),
                         boxShadow: [
                           BoxShadow(
                               blurRadius: 5,
                               spreadRadius: 2,
                               color: Colors.grey.shade100)
                         ]),
-                    height: 60,
+                    height: 6.32024*SizeConfig.heightMultiplier,
                     child: TextField(
                       onChanged: (value) async {
                         //* Search for accounts api call
@@ -82,31 +83,31 @@ class _SearchPageState extends State<SearchPage> {
                         });
                       },
                       style:
-                          TextStyle(color: Colors.grey.shade200, fontSize: 22),
+                          TextStyle(color: Colors.grey.shade200, fontSize: 2.31742*SizeConfig.heightMultiplier),
                       controller: _searchController,
                       decoration: InputDecoration(
                         prefixIcon: Icon(
                           Icons.search,
-                          size: 30,
+                          size:3.160*SizeConfig.heightMultiplier,
                           color: Colors.grey.shade200,
                         ),
                         label: Text(
                           "Search for creators and videos",
                           style: TextStyle(
-                              color: Colors.grey.shade200, fontSize: 22),
+                              color: Colors.grey.shade200, fontSize: 2.31742*SizeConfig.heightMultiplier),
                         ),
                         filled: true,
                         fillColor: ColorsApp.backgroundColor,
                         floatingLabelBehavior: FloatingLabelBehavior.never,
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
+                            borderRadius: BorderRadius.circular(1.264*SizeConfig.heightMultiplier),
                             borderSide: BorderSide(color: Colors.black)),
                         enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(1.264*SizeConfig.heightMultiplier),
                           borderSide: BorderSide(color: Colors.black),
                         ),
                         focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
+                            borderRadius: BorderRadius.circular(1.264*SizeConfig.heightMultiplier),
                             borderSide: BorderSide(color: Colors.white)),
                       ),
                     ),
@@ -120,7 +121,7 @@ class _SearchPageState extends State<SearchPage> {
                   ? Center(
                       child: Text(
                         "No Accounts Found",
-                        style: TextStyle(color: Colors.white, fontSize: 36),
+                        style: TextStyle(color: Colors.white, fontSize: 3.79213*SizeConfig.heightMultiplier),
                       ),
                     )
                   : ListView.builder(
@@ -128,19 +129,19 @@ class _SearchPageState extends State<SearchPage> {
                       itemBuilder: (context, index) {
                         return Padding(
                           padding:
-                              EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                              EdgeInsets.symmetric(horizontal: 2.6785*SizeConfig.widthMultiplier, vertical: 0.84269*SizeConfig.heightMultiplier),
                           child: ListTile(
                             contentPadding: EdgeInsets.symmetric(
-                                horizontal: 15, vertical: 5),
-                            minTileHeight: 85,
+                                horizontal: 3.3482*SizeConfig.widthMultiplier, vertical: 0.5266*SizeConfig.heightMultiplier),
+                            minTileHeight: 8.9536*SizeConfig.heightMultiplier,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
+                                borderRadius: BorderRadius.circular(1.053*SizeConfig.heightMultiplier),
                                 side: BorderSide(
                                     color: Color.fromARGB(255, 189, 167, 247),
                                     width: 2)),
                             tileColor: Color.fromARGB(255, 32, 32, 32),
                             leading: CircleAvatar(
-                              radius: 25,
+                              radius: 2.6334*SizeConfig.heightMultiplier,
                               backgroundColor: Colors.purple.shade600,
                               child: Center(
                                 child: Text(
@@ -150,7 +151,7 @@ class _SearchPageState extends State<SearchPage> {
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 28),
+                                      fontSize: 2.949448*SizeConfig.heightMultiplier),
                                 ),
                               ),
                             ),
@@ -159,14 +160,14 @@ class _SearchPageState extends State<SearchPage> {
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 24),
+                                  fontSize: 2.5280*SizeConfig.heightMultiplier),
                             ),
                             subtitle: Text(
                               "@${_accounts[index]["email"].toString()}",
                               style: TextStyle(
                                   color: Colors.grey,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 18),
+                                  fontSize: 1.8960*SizeConfig.heightMultiplier),
                             ),
                             trailing: TextButton(
                                 style: ButtonStyle(
@@ -174,7 +175,7 @@ class _SearchPageState extends State<SearchPage> {
                                         Colors.purple.shade600),
                                     shape: WidgetStatePropertyAll(
                                       RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(15),
+                                        borderRadius: BorderRadius.circular(1.580068*SizeConfig.heightMultiplier),
                                       ),
                                     )),
                                 onPressed: () async {
@@ -216,7 +217,7 @@ class _SearchPageState extends State<SearchPage> {
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontWeight: FontWeight.w600,
-                                        fontSize: 20),
+                                        fontSize: 2.1067*SizeConfig.heightMultiplier),
                                   ),
                                 )),
                           ),
@@ -225,7 +226,7 @@ class _SearchPageState extends State<SearchPage> {
               : Center(
                   child: Text(
                     "Search To Find Accounts",
-                    style: TextStyle(color: Colors.white, fontSize: 36),
+                    style: TextStyle(color: Colors.white, fontSize:3.79214*SizeConfig.heightMultiplier),
                   ),
                 )),
     ));

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:social_media/pages/nav_pages/upload_page_detail.dart';
 import 'package:social_media/services/cloudinaryServices.dart';
 import 'package:social_media/styling/colors.dart';
+import 'package:social_media/styling/sizeConfig.dart';
 
 class UploadPage extends StatefulWidget {
   const UploadPage({super.key});
@@ -19,8 +20,9 @@ class _UploadPageState extends State<UploadPage> {
         headerSliverBuilder: (context, innerBoxIsScrolled) {
           return [
             SliverAppBar(
+              automaticallyImplyLeading: false,
               backgroundColor: ColorsApp.backgroundColor,
-              toolbarHeight: 75,
+              toolbarHeight: 7.9002*SizeConfig.heightMultiplier,
               actions: [
                 IconButton(
                     onPressed: () {
@@ -29,7 +31,7 @@ class _UploadPageState extends State<UploadPage> {
                     icon: Icon(
                       Icons.upload,
                       color: Colors.white,
-                      size: 38,
+                      size: 4.0028*SizeConfig.heightMultiplier,
                     )),
               ],
               title: Text(
@@ -37,7 +39,7 @@ class _UploadPageState extends State<UploadPage> {
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w600,
-                    fontSize: 34),
+                    fontSize: 3.58146*SizeConfig.heightMultiplier),
               ),
             ),
           ];
@@ -45,9 +47,9 @@ class _UploadPageState extends State<UploadPage> {
         body: Align(
           alignment: Alignment.center,
           child: Container(
-            margin: EdgeInsets.only(bottom: 100),
-            height: 380,
-            width: 390,
+            margin: EdgeInsets.only(bottom: 10.533*SizeConfig.heightMultiplier),
+            height: 40.028*SizeConfig.heightMultiplier,
+            width: 87.053*SizeConfig.widthMultiplier,
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
@@ -56,49 +58,49 @@ class _UploadPageState extends State<UploadPage> {
                     color: Color(0xFF6E59A5), blurRadius: 7, spreadRadius: 4),
               ],
               color: Color.fromARGB(255, 53, 51, 51),
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(1.264*SizeConfig.heightMultiplier),
             ),
             child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 35),
+              padding: EdgeInsets.symmetric(vertical: 3.68679*SizeConfig.heightMultiplier),
               child: Column(
                 children: [
                   Center(
                     child: CircleAvatar(
                       backgroundColor: Colors.purple.shade700,
-                      radius: 45,
+                      radius: 4.74017*SizeConfig.heightMultiplier,
                       child: Center(
                         child: Icon(
                           Icons.upload,
                           color: Colors.white,
-                          size: 56,
+                          size: 5.89887*SizeConfig.heightMultiplier,
                         ),
                       ),
                     ),
                   ),
                   SizedBox(
-                    height: 25,
+                    height: 2.6334*SizeConfig.heightMultiplier,
                   ),
                   Text(
                     "Upload Your Video",
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 32,
+                        fontSize: 3.3707*SizeConfig.heightMultiplier,
                         fontWeight: FontWeight.w500),
                   ),
                   SizedBox(
-                    height: 8,
+                    height: 0.8426*SizeConfig.heightMultiplier,
                   ),
                   FittedBox(
                     child: Text(
                       "Share your videos with your followers",
                       style: TextStyle(
                           color: Colors.grey,
-                          fontSize: 21,
+                          fontSize: 2.212*SizeConfig.heightMultiplier,
                           fontWeight: FontWeight.w500),
                     ),
                   ),
                   SizedBox(
-                    height: 25,
+                    height: 2.633427*SizeConfig.heightMultiplier,
                   ),
                   ElevatedButton(
                       onPressed: () async {
@@ -118,13 +120,13 @@ class _UploadPageState extends State<UploadPage> {
                           backgroundColor:
                               WidgetStatePropertyAll(Colors.purple.shade700),
                           shape: WidgetStatePropertyAll(RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20))),
-                          fixedSize: WidgetStatePropertyAll(Size(180, 60))),
+                              borderRadius: BorderRadius.circular(2.106742*SizeConfig.heightMultiplier))),
+                          fixedSize: WidgetStatePropertyAll(Size(40.1785*SizeConfig.widthMultiplier, 6.320246*SizeConfig.heightMultiplier))),
                       child: Center(
                         child: FittedBox(
                           child: Text(
                             "Select Video",
-                            style: TextStyle(color: Colors.white, fontSize: 23),
+                            style: TextStyle(color: Colors.white, fontSize: 2.4227*SizeConfig.heightMultiplier),
                           ),
                         ),
                       ))

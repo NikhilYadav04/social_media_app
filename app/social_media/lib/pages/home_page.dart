@@ -5,6 +5,7 @@ import 'package:social_media/pages/nav_pages/search_page.dart';
 import 'package:social_media/services/videoServices.dart';
 import 'package:social_media/services/walletServices.dart';
 import 'package:social_media/styling/colors.dart';
+import 'package:social_media/styling/sizeConfig.dart';
 import 'package:social_media/widgets/videoCard.dart';
 
 class HomePage extends StatefulWidget {
@@ -65,14 +66,14 @@ class _HomePageState extends State<HomePage> with RouteAware {
           //* Header Card
           SliverAppBar(
             automaticallyImplyLeading: false,
-            expandedHeight: 150,
+            expandedHeight: 15.80056*SizeConfig.heightMultiplier,
             backgroundColor: ColorsApp.backgroundColor,
             flexibleSpace: FlexibleSpaceBar(
               background: Padding(
-                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                padding: EdgeInsets.symmetric(vertical: 2.10674*SizeConfig.heightMultiplier, horizontal: 2.23214*SizeConfig.widthMultiplier),
                 child: Container(
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(1.053*SizeConfig.heightMultiplier),
                       gradient: LinearGradient(
                         colors: [
                           Color(0xFFB36A5E), // soft warm brown
@@ -92,7 +93,7 @@ class _HomePageState extends State<HomePage> with RouteAware {
                             spreadRadius: 2),
                       ]),
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 12),
+                    padding: EdgeInsets.symmetric(horizontal: 2.6785*SizeConfig.widthMultiplier),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -100,13 +101,13 @@ class _HomePageState extends State<HomePage> with RouteAware {
                           "Follow you favorite person to\nwatch their Chapter.",
                           style: TextStyle(
                               color: Colors.white,
-                              fontSize: 24.5,
+                              fontSize: 2.580759*SizeConfig.heightMultiplier,
                               fontWeight: FontWeight.w700),
                         ),
                         Icon(
                           Icons.group,
                           color: Colors.white,
-                          size: 56,
+                          size: 5.89887*SizeConfig.heightMultiplier,
                         )
                       ],
                     ),
@@ -123,7 +124,7 @@ class _HomePageState extends State<HomePage> with RouteAware {
             floating: true,
             snap: true,
             backgroundColor: ColorsApp.backgroundColor,
-            toolbarHeight: 90,
+            toolbarHeight: 9.48034*SizeConfig.heightMultiplier,
             title: InkWell(
               onTap: () {
                 Navigator.push(
@@ -136,42 +137,42 @@ class _HomePageState extends State<HomePage> with RouteAware {
               },
               child: Container(
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(1.2640453*SizeConfig.heightMultiplier),
                     boxShadow: [
                       BoxShadow(
                           blurRadius: 5,
                           spreadRadius: 2,
                           color: Colors.grey.shade100)
                     ]),
-                height: 60,
+                height: 6.32024*SizeConfig.heightMultiplier,
                 child: TextField(
                   enabled: false,
-                  style: TextStyle(color: Colors.grey.shade200, fontSize: 22),
+                  style: TextStyle(color: Colors.grey.shade200, fontSize: 2.31741*SizeConfig.heightMultiplier),
                   controller: _searchController,
                   decoration: InputDecoration(
-                    contentPadding: EdgeInsets.all(20),
+                    contentPadding: EdgeInsets.all(2.106*SizeConfig.heightMultiplier),
                     prefixIcon: Icon(
                       Icons.search,
-                      size: 30,
+                      size: 3.160113*SizeConfig.heightMultiplier,
                       color: Colors.grey.shade200,
                     ),
                     label: Text(
                       "Search for creators and videos",
                       style:
-                          TextStyle(color: Colors.grey.shade200, fontSize: 22),
+                          TextStyle(color: Colors.grey.shade200, fontSize: 2.31741*SizeConfig.heightMultiplier),
                     ),
                     filled: true,
                     fillColor: ColorsApp.backgroundColor,
                     floatingLabelBehavior: FloatingLabelBehavior.never,
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(1.2640453*SizeConfig.heightMultiplier),
                         borderSide: BorderSide(color: Colors.black)),
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(1.2640453*SizeConfig.heightMultiplier),
                       borderSide: BorderSide(color: Colors.black),
                     ),
                     focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(1.2640453*SizeConfig.heightMultiplier),
                         borderSide: BorderSide(color: Colors.white)),
                   ),
                 ),
@@ -181,7 +182,7 @@ class _HomePageState extends State<HomePage> with RouteAware {
         ];
       },
       body: Padding(
-        padding: EdgeInsets.only(top: 30, left: 10, right: 10, bottom: 20),
+        padding: EdgeInsets.only(top: 3.1601*SizeConfig.heightMultiplier, left: 2.232*SizeConfig.widthMultiplier, right: 2.232*SizeConfig.widthMultiplier, bottom: 2.106*SizeConfig.heightMultiplier),
         child: Skeletonizer(
           enabled: _isFetching,
           child: MasonryGridView.count(

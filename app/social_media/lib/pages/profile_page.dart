@@ -7,6 +7,7 @@ import 'package:social_media/services/accountService.dart';
 import 'package:social_media/services/authServices.dart';
 import 'package:social_media/services/videoServices.dart';
 import 'package:social_media/styling/colors.dart';
+import 'package:social_media/styling/sizeConfig.dart';
 import 'package:social_media/widgets/logger_glob.dart';
 import 'package:social_media/widgets/videoCard.dart';
 import 'package:social_media/widgets/videoCardHome.dart';
@@ -74,18 +75,18 @@ class _ProfilePageState extends State<ProfilePage>
           return [
             SliverAppBar(
               automaticallyImplyLeading: false,
-              expandedHeight: 220,
+              expandedHeight: 23.17416*SizeConfig.heightMultiplier,
               backgroundColor: ColorsApp.backgroundColor,
               flexibleSpace: FlexibleSpaceBar(
                 background: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                  padding: EdgeInsets.symmetric(vertical: 2.1067*SizeConfig.heightMultiplier, horizontal: 2.2321*SizeConfig.widthMultiplier),
                   child: Skeletonizer(
                     enabled: _isFetching,
                     child: Container(
-                        padding: EdgeInsets.symmetric(vertical: 4),
-                        height: 220,
+                        padding: EdgeInsets.symmetric(vertical: 0.4213*SizeConfig.heightMultiplier),
+                        height: 23.1742*SizeConfig.heightMultiplier,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(1.053*SizeConfig.heightMultiplier),
                             gradient: LinearGradient(
                               colors: [
                                 Color(0xFFB36A5E), // soft warm brown
@@ -109,16 +110,16 @@ class _ProfilePageState extends State<ProfilePage>
                             ListTile(
                                 // contentPadding: EdgeInsets.symmetric(
                                 //     horizontal: 15, vertical: 5),
-                                minTileHeight: 85,
+                                minTileHeight: 8.953*SizeConfig.heightMultiplier,
                                 shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10),
+                                    borderRadius: BorderRadius.circular(1.053*SizeConfig.heightMultiplier),
                                     side: BorderSide(
                                         color:
                                             Color.fromARGB(255, 189, 167, 247),
                                         width: 2)),
                                 tileColor: Color.fromARGB(255, 32, 32, 32),
                                 leading: CircleAvatar(
-                                  radius: 28,
+                                  radius: 2.9494*SizeConfig.heightMultiplier,
                                   backgroundColor: Colors.purple.shade600,
                                   child: Center(
                                     child: Text(
@@ -128,7 +129,7 @@ class _ProfilePageState extends State<ProfilePage>
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 30),
+                                          fontSize: 3.16011*SizeConfig.heightMultiplier),
                                     ),
                                   ),
                                 ),
@@ -137,17 +138,17 @@ class _ProfilePageState extends State<ProfilePage>
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 28),
+                                      fontSize: 2.94944*SizeConfig.heightMultiplier),
                                 ),
                                 subtitle: Text(
                                   profileDetails[0]["account"]["email"],
                                   style: TextStyle(
                                       color: Color.fromARGB(255, 226, 221, 221),
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 20),
+                                      fontSize: 2.1067*SizeConfig.heightMultiplier),
                                 ),
                                 trailing: SizedBox(
-                                  width: 115,
+                                  width: 25.6696*SizeConfig.widthMultiplier,
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
@@ -165,16 +166,16 @@ class _ProfilePageState extends State<ProfilePage>
                                                   WidgetStatePropertyAll(
                                                       Colors.purple.shade600),
                                               fixedSize: WidgetStatePropertyAll(
-                                                  Size(55, 50)),
+                                                  Size(12.2767*SizeConfig.widthMultiplier, 5.26687*SizeConfig.heightMultiplier)),
                                               shape: WidgetStatePropertyAll(
                                                   RoundedRectangleBorder(
                                                       borderRadius:
                                                           BorderRadius.circular(
-                                                              8)))),
+                                                              0.84269*SizeConfig.heightMultiplier)))),
                                           icon: Icon(
                                             Icons
                                                 .account_balance_wallet_outlined,
-                                            size: 28,
+                                            size: 2.949439*SizeConfig.heightMultiplier,
                                             color: Colors.white,
                                           )),
                                       IconButton(
@@ -191,25 +192,25 @@ class _ProfilePageState extends State<ProfilePage>
                                                   WidgetStatePropertyAll(
                                                       Colors.purple.shade600),
                                               fixedSize: WidgetStatePropertyAll(
-                                                  Size(50, 50)),
+                                                  Size(11.1607*SizeConfig.widthMultiplier, 5.26687*SizeConfig.heightMultiplier)),
                                               shape: WidgetStatePropertyAll(
                                                   RoundedRectangleBorder(
                                                       borderRadius:
                                                           BorderRadius.circular(
-                                                              8)))),
+                                                               0.84269*SizeConfig.heightMultiplier)))),
                                           icon: Icon(
                                             Icons.power_settings_new_sharp,
-                                            size: 28,
+                                            size: 2.94943*SizeConfig.heightMultiplier,
                                             color: Colors.white,
                                           )),
                                     ],
                                   ),
                                 )),
                             SizedBox(
-                              height: 14,
+                              height: 1.47471*SizeConfig.heightMultiplier,
                             ),
                             Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 12),
+                              padding: EdgeInsets.symmetric(horizontal: 2.67857*SizeConfig.widthMultiplier),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
@@ -222,19 +223,19 @@ class _ProfilePageState extends State<ProfilePage>
                                               RoundedRectangleBorder(
                                                   borderRadius:
                                                       BorderRadius.circular(
-                                                          12))),
+                                                          1.2640*SizeConfig.heightMultiplier))),
                                           fixedSize: WidgetStatePropertyAll(
-                                              Size(150, 50))),
+                                              Size(33.482*SizeConfig.widthMultiplier, 5.26687*SizeConfig.heightMultiplier))),
                                       onPressed: () {},
                                       child: Text(
                                         "Followers  ${profileDetails[0]["account"]["follower_count"]}",
                                         style: TextStyle(
                                             color: Colors.white,
-                                            fontSize: 20,
+                                            fontSize: 2.1067*SizeConfig.heightMultiplier,
                                             fontWeight: FontWeight.w600),
                                       )),
                                   SizedBox(
-                                    width: 15,
+                                    width: 3.3482*SizeConfig.widthMultiplier,
                                   ),
                                   TextButton(
                                       style: ButtonStyle(
@@ -245,15 +246,15 @@ class _ProfilePageState extends State<ProfilePage>
                                               RoundedRectangleBorder(
                                                   borderRadius:
                                                       BorderRadius.circular(
-                                                          12))),
+                                                          1.2640453*SizeConfig.heightMultiplier))),
                                           fixedSize: WidgetStatePropertyAll(
-                                              Size(150, 50))),
+                                              Size(33.48214*SizeConfig.widthMultiplier, 5.2668*SizeConfig.heightMultiplier))),
                                       onPressed: () {},
                                       child: Text(
                                         "Following  ${profileDetails[0]["account"]["following_count"]}",
                                         style: TextStyle(
                                             color: Colors.white,
-                                            fontSize: 20,
+                                            fontSize: 2.1067*SizeConfig.heightMultiplier,
                                             fontWeight: FontWeight.w600),
                                       )),
                                 ],
@@ -276,7 +277,7 @@ class _ProfilePageState extends State<ProfilePage>
                 controller: _tabController,
                 labelStyle: TextStyle(
                     color: Colors.white,
-                    fontSize: 20,
+                    fontSize: 2.1067*SizeConfig.heightMultiplier,
                     fontWeight: FontWeight.w600),
                 tabs: [
                   Tab(
@@ -287,13 +288,13 @@ class _ProfilePageState extends State<ProfilePage>
                   ),
                 ]),
             SizedBox(
-              height: 15,
+              height: 1.580*SizeConfig.heightMultiplier,
             ),
             Expanded(
               child: TabBarView(controller: _tabController, children: [
                 Padding(
                   padding:
-                      EdgeInsets.only(top: 20, left: 10, right: 10, bottom: 20),
+                      EdgeInsets.only(top: 1.067*SizeConfig.heightMultiplier, left: 2.2321*SizeConfig.widthMultiplier, right: 2.2321*SizeConfig.widthMultiplier, bottom: 1.067*SizeConfig.heightMultiplier),
                   child: MasonryGridView.count(
                     clipBehavior: Clip.none,
                     shrinkWrap: true,
@@ -339,14 +340,14 @@ class _ProfilePageState extends State<ProfilePage>
                             purchased_videos[index]["title"],
                             purchased_videos[index]["uploadedAt"],
                             purchased_videos[index]["videoCreator"],
-                            purchased_videos[index]["videoURL"],
+                            thumbnailURL(purchased_videos[index]["videoURL"]),
                           ));
                     },
                   ),
                 ),
                 Padding(
                   padding:
-                      EdgeInsets.only(top: 20, left: 10, right: 10, bottom: 20),
+                       EdgeInsets.only(top: 1.067*SizeConfig.heightMultiplier, left: 2.2321*SizeConfig.widthMultiplier, right: 2.2321*SizeConfig.widthMultiplier, bottom: 1.067*SizeConfig.heightMultiplier),
                   child: MasonryGridView.count(
                     clipBehavior: Clip.none,
                     shrinkWrap: true,
@@ -390,7 +391,7 @@ class _ProfilePageState extends State<ProfilePage>
                             user_videos[index]["title"],
                             user_videos[index]["uploadedAt"],
                             user_videos[index]["videoCreator"],
-                            user_videos[index]["videoURL"],
+                            thumbnailURL(user_videos[index]["videoURL"]),
                           ));
                     },
                   ),
